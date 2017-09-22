@@ -16,12 +16,12 @@
 * 支持系统的，第三方的，以及自制的窗口部件
 * 低性能开销
 
-虚拟树用 face 对象构造。每个 face 对象以双向绑定映射一个图形组件。
-//根据中学生编程.pdf里提到的facet称为属性.  感觉这个facet= face +type的t的合体词
+虚拟树用 `face` 对象构造。每个 `face` 对象以双向绑定方式映射一个图形组件。
 
 == Face对象(Face object)
 
-face对象是 `face!` 模板对象的克隆. 在face对象中的一个字段被称作属性( _facet_ )。
+face对象是 `face!` 模板对象的克隆。 在face对象中的一个字段被称作属性( _facet_ )。
+//根据中学生编程.pdf里提到的facet称为属性.  感觉这个facet= face +type的t的合体词
 
 可用属性(facets)的列表:
 
@@ -29,19 +29,19 @@ face对象是 `face!` 模板对象的克隆. 在face对象中的一个字段被�
 |===
 
 |属性 Facet | 数据类型 Datatype | 强制性 Mandatory? | 适用性 Applicability | 描述 Description
-|type| word!| yes| all| Type of graphic component (see link:view.html#_face_types[below]).
-|offset| pair!| yes| all| Offset position from parent top-left origin.
-|size| pair!| yes| all| Size of the face.
-|text| string!| no| all| Label text displayed in the face.
-|image| image!| no| some| Image displayed in the face background.
-|color| tuple!| no| some| Background color of the face in R.G.B or R.G.B.A format.
-|menu| block!| no| all| Menu bar or contextual menu.
-|data| any-type!| no| all| Content data of the face.
-|enabled?| logic!| yes| all| Enable or disable input events on the face.
-|visible?| logic!|	yes| all| Display or hide the face.
-|selected| integer!| no| some| For lists types,  index of currently selected element.
-|flags| block!, word!| no|	some| List of special keywords altering the display or behavior of the face.
-|options| block!| no| some| Extra face properties in a [name: value] format.
+|type| word!| yes| all| 图形组件类型 (见 link:view.html#_face_types[下]).
+|offset| pair!| yes| all| 相对于父件左上角的位置。
+|size| pair!| yes| all| face的尺寸。
+|text| string!| no| all| 在face中显示的标签文本。
+|image| image!| no| some| 在face中显示的背景图片。
+|color| tuple!| no| some| face的背景颜色，格式为RGB或RGBA。
+|menu| block!| no| all| 菜单条或关联菜单。
+|data| any-type!| no| all| face的内容数据。
+|enabled?| logic!| yes| all| 是否允许face上的输入事件。
+|visible?| logic!|	yes| all| 显示或隐藏face.
+|selected| integer!| no| some| 针对列表类型，是当前选中元素的索引号。
+|flags| block!, word!| no|	some| 特殊的关键字列表，切换face的显示或行为。
+|options| block!| no| some| 额外的Face属性。格式：[name: value]
 |parent| object!| no| all|	Back-reference to parent face (if any).
 |pane| block!| no| some| List of child face(s) displayed inside the face.
 |state| block| no| all| Internal face state info _(used by View engine only)_.
