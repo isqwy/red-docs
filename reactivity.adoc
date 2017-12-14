@@ -5,15 +5,15 @@
 
 == 概念 
 
-自版本0.6.0开始，Red引入响应式编程，以精简程序。 响应模式依赖于数据流和对象事件，以构造有向图及在对象间传递变化。它使用推送（push）模式，更准确讲，是 https://en.wikipedia.org/wiki/Reactive_programming#Object-oriented[对象响应式编程] 模式，仅对象字段是变化之源。
+自版本0.6.0开始，Red引入 `响应式编程` ，以精炼程序(减小程序的尺寸及复杂度)。 响应模式依赖于数据流和对象事件，以构造有向图及在对象间传递变化。它使用推送（push）模式，进一步讲，是 https://en.wikipedia.org/wiki/Reactive_programming#Object-oriented[对象响应式编程] 模式，仅对象字段是变化之源。
 
-虽然描述的抽象，但响应式 API 及其使用，简单而实用。下面是一些图表，帮助可视化响应关系。
+虽然描述的抽象，但响应式编程的 API 及其使用，简单而实用。下面是一些图表，帮助可视化响应关系。
 
-image::react-simple.png[react-simple,align="center"]
+image::https://doc.red-lang.org/images/react-simple.png[react-simple,align="center"]
 
 _图 A & B 展示了一或多个响应器（Reactor:作为响应源的对象）之间的简单关系。_
 
-image::react-graphs.png[react-graph,align="center"]
+image::https://doc.red-lang.org/images/react-graphs.png[react-graph,align="center"]
 
 
 _图 C, D & E 展示响应关系链, 其中某些目标自身就是响应器（Reactor）, 使得关系链可为任何形状。_
